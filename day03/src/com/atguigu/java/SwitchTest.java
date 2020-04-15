@@ -17,7 +17,7 @@ public class SwitchTest {
         int sumday=0;
         switch (month){
             case 3:
-                if(year/4==0 && year/100!=0 || year/400==0){
+                if((year % 4 == 0 && year % 100 !=0)  || (year % 400 == 0)){
                     sumday=28+sumday;
                 }else{
                     sumday=28+sumday;
