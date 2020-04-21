@@ -11,7 +11,7 @@ public class FamilyAccount {
     public static void main(String[] args) {
         String details = "收支\t账户金额\t收支金额\t说    明\n";
         int balance = 10000;
-        boolean flag=true;
+        boolean flag = true;
         do {
             System.out.println("\n-----------------家庭收支记账软件-----------------\n");
             System.out.println("                   1 收支明细");
@@ -20,7 +20,7 @@ public class FamilyAccount {
             System.out.println("                   4 退    出\n");
             System.out.print("                   请选择(1-4)：");
             char key = Utility.readMenuSelection();
-            switch (key){
+            switch (key) {
                 case '1':
                     System.out.println(details);
                     break;
@@ -29,8 +29,8 @@ public class FamilyAccount {
                     int i = Utility.readNumber();
                     System.out.print("说明：");
                     String s = Utility.readString();
-                    balance +=i;
-                    details +="\n收入\t"+balance+"\t"+i+"\t"+s+"\n";
+                    balance += i;
+                    details += "\n收入\t" + balance + "\t" + i + "\t" + s + "\n";
                     break;
 
                 case '3':
@@ -38,15 +38,13 @@ public class FamilyAccount {
                     int a = Utility.readNumber();
                     System.out.print("说明：");
                     String b = Utility.readString();
-                    balance -=a;
-                    details +="\n支出\t"+balance+"\t"+a+"\t"+b+"\n";
+                    balance -= a;
+                    details += "\n支出\t" + balance + "\t" + a + "\t" + b + "\n";
                     break;
                 case '4':
-                    flag=false;
+                    flag = false;
                     break;
             }
-
-
-        }while (flag);
+        } while (flag);
     }
 }
